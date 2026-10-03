@@ -134,4 +134,4 @@ Python, pandas, NumPy, scikit-learn, XGBoost, SHAP, Matplotlib, Seaborn, Streaml
 
 - Dataset: Crop Recommendation Dataset (Kaggle, Atharva Ingle)
 - Weather and geocoding: Open-Meteo (CC BY 4.0)
-- Photos: add credits here
+- Photos: UNSCAMBLE
