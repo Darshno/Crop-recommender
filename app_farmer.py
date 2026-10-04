@@ -53,6 +53,11 @@ div.stButton {width:100%}
 .st-key-nav .stButton>button p {font-size:1.3rem;color:__G__}
 .stSelectbox div[data-baseweb="select"]>div {min-height:68px;border-radius:34px;background:#fff;font-size:1.5rem;padding-left:14px}
 .stSelectbox div[data-baseweb="select"] * {color:#12301d}
+.pills {text-align:center;margin:6px 0 10px}
+.pill {display:inline-block;width:46px;height:46px;line-height:46px;border-radius:23px;background:#e8e6df;font-size:1.3rem;margin:0 6px}
+.pill.on {background:__O__;color:#fff;font-weight:800}
+.pill.done {background:__G__;color:#fff}
+.stepname {text-align:center;font-size:1.2rem;font-weight:700;margin-bottom:6px}
 </style>""".replace("__G__", GREEN).replace("__O__", ORANGE), unsafe_allow_html=True)
 
 # ---------------- Photos (put your images in an "assets" folder next to this file) ----------------
@@ -114,6 +119,27 @@ T["kn"].update(scan="ಮಣ್ಣು ಕಾರ್ಡ್‌ನ ಫೋಟೋ ತ�
                scan_fail="ಕಾರ್ಡ್ ಸ್ಪಷ್ಟವಾಗಿ ಓದಲಾಗಲಿಲ್ಲ. ಕೆಳಗೆ ಆರಿಸಿ.")
 T["hi"].update(scan="मिट्टी कार्ड की फोटो लें", scan_ok="कार्ड से पढ़ा गया। नीचे जाँच लें।",
                scan_fail="कार्ड साफ़ नहीं पढ़ पाए। नीचे चुनें।")
+T["en"].update(
+ step="Step {n} of 3", pick_first="👆 First choose your district above", scan_btn="Take / choose photo",
+ wx_legend="🌡️ Temperature · 💧 Humidity · 🌧️ Rain per month (last 3 months)",
+ i_where="1. Tap the box below.<br>2. Choose your district.<br>3. Wait for the weather to appear, then tap <b>Next</b>.",
+ i_soil="Do you have a <b>Soil Health Card</b>? Tap the <b>green button</b> to scan it.<br>No card? Tap the colour of your soil.",
+ i_card="1. Take a photo of the table on your card (card flat, good light).<br>2. Check the answers below: ⬇️ Low, ➡️ Medium, ⬆️ High. Change any that are wrong.<br>3. Tap <b>Show crops</b>.",
+ i_result="These crops suit your land.<br>A <b>bigger %</b> means a better match. The <b>orange</b> one is the best.<br>Tap 🔊 to listen.")
+T["kn"].update(
+ step="ಹಂತ {n} / 3", pick_first="👆 ಮೊದಲು ಮೇಲೆ ನಿಮ್ಮ ಜಿಲ್ಲೆ ಆರಿಸಿ", scan_btn="ಫೋಟೋ ತೆಗೆಯಿರಿ",
+ wx_legend="🌡️ ತಾಪಮಾನ · 💧 ತೇವಾಂಶ · 🌧️ ತಿಂಗಳ ಮಳೆ (ಕಳೆದ 3 ತಿಂಗಳು)",
+ i_where="1. ಕೆಳಗಿನ ಪೆಟ್ಟಿಗೆಯನ್ನು ಒತ್ತಿ.<br>2. ನಿಮ್ಮ ಜಿಲ್ಲೆಯನ್ನು ಆರಿಸಿ.<br>3. ಹವಾಮಾನ ಬಂದ ಮೇಲೆ <b>ಮುಂದೆ</b> ಒತ್ತಿ.",
+ i_soil="ನಿಮ್ಮ ಬಳಿ <b>ಮಣ್ಣು ಆರೋಗ್ಯ ಕಾರ್ಡ್</b> ಇದೆಯೇ? ಇದ್ದರೆ <b>ಹಸಿರು ಬಟನ್</b> ಒತ್ತಿ.<br>ಇಲ್ಲದಿದ್ದರೆ ನಿಮ್ಮ ಮಣ್ಣಿನ ಬಣ್ಣ ಒತ್ತಿ.",
+ i_card="1. ಕಾರ್ಡ್‌ನ ಟೇಬಲ್‌ನ ಫೋಟೋ ತೆಗೆಯಿರಿ (ಕಾರ್ಡ್ ನೇರವಾಗಿ, ಬೆಳಕಿನಲ್ಲಿ ಇಡಿ).<br>2. ಕೆಳಗಿನ ಉತ್ತರ ನೋಡಿ: ⬇️ ಕಡಿಮೆ, ➡️ ಮಧ್ಯಮ, ⬆️ ಹೆಚ್ಚು. ತಪ್ಪಿದ್ದರೆ ಬದಲಿಸಿ.<br>3. <b>ಬೆಳೆ ತೋರಿಸಿ</b> ಒತ್ತಿ.",
+ i_result="ಈ ಬೆಳೆಗಳು ನಿಮ್ಮ ಭೂಮಿಗೆ ಸೂಕ್ತ.<br><b>% ಹೆಚ್ಚಿದ್ದರೆ</b> ಹೆಚ್ಚು ಸೂಕ್ತ. <b>ಕಿತ್ತಳೆ</b> ಬಣ್ಣದ್ದು ಅತ್ಯುತ್ತಮ.<br>ಕೇಳಲು 🔊 ಒತ್ತಿ.")
+T["hi"].update(
+ step="चरण {n} / 3", pick_first="👆 पहले ऊपर अपना जिला चुनें", scan_btn="फोटो लें",
+ wx_legend="🌡️ तापमान · 💧 नमी · 🌧️ महीने की बारिश (पिछले 3 महीने)",
+ i_where="1. नीचे वाले डिब्बे को दबाएँ।<br>2. अपना जिला चुनें।<br>3. मौसम आने पर <b>आगे</b> दबाएँ।",
+ i_soil="क्या आपके पास <b>मिट्टी स्वास्थ्य कार्ड</b> है? है तो <b>हरा बटन</b> दबाएँ।<br>नहीं है तो अपनी मिट्टी का रंग दबाएँ।",
+ i_card="1. कार्ड की टेबल की फोटो लें (कार्ड सीधा रखें, रोशनी में)।<br>2. नीचे के जवाब देखें: ⬇️ कम, ➡️ मध्यम, ⬆️ ज़्यादा। गलत हों तो बदलें।<br>3. <b>फसल दिखाएँ</b> दबाएँ।",
+ i_result="ये फसलें आपकी ज़मीन के लिए ठीक हैं।<br><b>% ज़्यादा</b> मतलब ज़्यादा सही। <b>नारंगी</b> वाली सबसे अच्छी है।<br>सुनने के लिए 🔊 दबाएँ।")
 CROP_EMOJI = {"apple": "🍎", "banana": "🍌", "blackgram": "🫘", "chickpea": "🫘", "coconut": "🥥", "coffee": "☕",
   "cotton": "☁️", "grapes": "🍇", "jute": "🌿", "kidneybeans": "🫘", "lentil": "🫘", "maize": "🌽", "mango": "🥭",
   "mothbeans": "🫘", "mungbean": "🌱", "muskmelon": "🍈", "orange": "🍊", "papaya": "🍈", "pigeonpeas": "🫛",
@@ -129,7 +155,7 @@ CROP_NAME = {
    pigeonpeas="अरहर", pomegranate="अनार", rice="धान", watermelon="तरबूज"),
 }
 def crop_name(c, lang):
-    return c.title() if lang == "en" else CROP_NAME[lang][c]
+    return c.title() if lang == "en" else CROP_NAME[lang].get(c, c.title())
 
 # ---------------- Model + soil helpers ----------------
 @st.cache_resource
@@ -283,6 +309,19 @@ def scan_card(data):
     rows.append(cur)
     return parse_lines([" ".join(tx for _, tx in sorted(r)) for r in rows])
 
+def steps(n):
+    pills = "".join(f"<span class='pill {'on' if i == n else 'done' if i < n else ''}'>{ico}</span>"
+                    for i, ico in enumerate(["📍", "🌱", "🏆"], 1))
+    st.markdown(f"<div class='pills'>{pills}</div><div class='stepname'>{t['step'].format(n=n)}</div>", unsafe_allow_html=True)
+
+def instr(key):
+    st.markdown(f"<div class='card' style='font-size:1.3rem;line-height:1.8'>{t[key]}</div>", unsafe_allow_html=True)
+
+def speak_text(title, key):  # what the 🔊 button reads: the heading + the instructions (tags/emoji removed)
+    txt = re.sub(r"<br>", ". ", t[key]); txt = re.sub(r"<[^>]+>", "", txt)
+    txt = re.sub(r"[\U0001F000-\U0001FAFF\u2600-\u27BF\u2B00-\u2BFF\uFE0F\u20E3]", " ", txt)
+    return f"{title}. {txt}"
+
 # ---------------- State + callbacks ----------------
 S = st.session_state
 S.setdefault("step", "lang"); S.setdefault("lang", "en"); S.setdefault("w", (25.0, 70.0, 100.0))
@@ -315,7 +354,8 @@ if S.step == "lang":
         col.button(name, key=f"lang_{code}", on_click=set_lang, args=(code,))
 
 elif S.step == "where":
-    hero("field", 170, f"<h2>📍 {t['where']}</h2>"); listen(t["where"], "where")
+    hero("field", 150, f"<h2>📍 {t['where']}</h2>"); steps(1); instr("i_where")
+    listen(speak_text(t["where"], "i_where"), "where")
     st.selectbox(t["where"], list(DIST), index=list(DIST).index(S.district) if S.get("district") else None,
                  format_func=dist_label, key="district_sel", on_change=pick_from_select,
                  label_visibility="collapsed", placeholder="▼  " + t["where"])
@@ -326,27 +366,36 @@ elif S.step == "where":
         st.markdown(f"<div><span class='chip on'>🌡️ {tp:.0f}°C</span><span class='chip'>💧 {hu:.0f}%</span>"
                     f"<span class='chip'>🌧️ {rn:.0f} mm</span><span class='chip'>📍 {S.wplace}</span></div>",
                     unsafe_allow_html=True)
+        st.caption(t["wx_legend"])
         if S.get("tnote"):
             st.warning(t["tn_fail"])
     st.button("➡️ " + t["next"], key="to_soil", on_click=go, args=("soil",), type="primary",
               disabled=S.get("wmsg") != "ok")
+    if S.get("wmsg") != "ok":
+        st.caption(t["pick_first"])
     if S.get("district"):
         with st.expander("🏘️ " + t["town"]):
             st.text_input(t["town"], key="place", label_visibility="collapsed", placeholder=t["town"])
             st.button("🔄 " + t["refine"], key="refine", on_click=fill_weather)
 
 elif S.step == "soil":
-    hero("soil", 170, f"<h2>🌱 {t['soil_q']}</h2>"); listen(t["soil_q"], "soil")
+    hero("soil", 150, f"<h2>🌱 {t['soil_q']}</h2>"); steps(2); instr("i_soil")
+    listen(speak_text(t["soil_q"], "i_soil"), "soil")
     ico = {"red": "🔴", "black": "⚫", "alluvial": "🟤", "laterite": "🟠", "sandy": "🟡", "unsure": "❓"}
     st.button("📄 " + t["card"], key="tile_card", on_click=pick_soil, args=("card",), type="primary")
     st.markdown(f"<p style='text-align:center;font-size:1.3rem;margin:4px 0'>— {t['or']} —</p>", unsafe_allow_html=True)
     tiles([(k, f"{ico[k]} {v}") for k, v in t["soil"].items()], 2, pick_soil)
 
 elif S.step == "card":
-    hero("soil", 150, f"<h2>📄 {t['card_q']}</h2>"); listen(t["card_q"], "card")
+    hero("soil", 130, f"<h2>📄 {t['card_q']}</h2>"); steps(2); instr("i_card")
+    listen(speak_text(t["card_q"], "i_card"), "card")
+    st.markdown("<style>[data-testid='stFileUploaderDropzoneInstructions']{display:none}"
+                "[data-testid='stFileUploaderDropzone'] button{font-size:0}"
+                f"[data-testid='stFileUploaderDropzone'] button::after{{content:'📷 {t['scan_btn']}';font-size:1.3rem}}</style>",
+                unsafe_allow_html=True)
     for k_ in ("nv", "pv", "kv", "phv"):
         S.setdefault(k_, 1)
-    up = st.file_uploader(" " + t["scan"], type=["jpg", "jpeg", "png"], key="card_img")
+    up = st.file_uploader("📷 " + t["scan"], type=["jpg", "jpeg", "png"], key="card_img")
     if up is not None:
         data = up.getvalue(); h = hashlib.md5(data).hexdigest()
         if S.get("ocr_hash") != h:  # new photo -> read it once, prefill the choices below
@@ -382,16 +431,16 @@ elif S.step == "result":
     N, P, K, ph = S.vals; tp, hu, rn = S.w
     probs = model.predict_proba(pd.DataFrame([[N, P, K, tp, hu, ph, rn]], columns=FEATURES))[0]
     top = [i for i in np.argsort(probs)[::-1][:3] if probs[i] >= 0.01]
-    hero("result", 170, f"<h2>🏆 {t['res']}</h2>")
+    hero("result", 150, f"<h2>🏆 {t['res']}</h2>"); steps(3); instr("i_result")
     speech = []
     for rank, i in enumerate(top):
         c = le.classes_[i]; name = crop_name(c, S.lang); pct = probs[i] * 100
         speech.append(f"{t['best']}: {name}." if rank == 0 else f"{name}.")
         img = photo(f"{BASE}/assets/crops/{c}")  # optional crop photo, falls back to emoji
         pic = (f"<img src='{img}' style='width:84px;height:84px;border-radius:22px;object-fit:cover'>" if img
-               else f"<span class='big'>{CROP_EMOJI[c]}</span>")
+               else f"<span class='big'>{CROP_EMOJI.get(c, '🌱')}</span>")
         st.markdown(f"<div class='card {'best' if rank == 0 else ''}'><div style='display:flex;align-items:center;gap:16px'>"
-                    f"{pic}<div style='flex:1'><b>{name}</b> &nbsp; {pct:.0f}%"
+                    f"{pic}<div style='flex:1'>{'<small>⭐ ' + t['best'] + '</small><br>' if rank == 0 else ''}<b>{name}</b> &nbsp; {pct:.0f}%"
                     f"<div class='bar'><div style='width:{pct:.0f}%'></div></div></div></div></div>", unsafe_allow_html=True)
     if top:
         listen(" ".join(speech), "result")
