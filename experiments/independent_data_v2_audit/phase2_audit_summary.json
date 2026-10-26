@@ -1,0 +1,114 @@
+{
+  "shared_classes": [
+    "cotton",
+    "maize",
+    "rice"
+  ],
+  "original_rows": 2200,
+  "independent_rows": 1000,
+  "exact_cross_source_feature_matches": 0,
+  "near_label_disagreement_pairs_within_distance": 36,
+  "near_distance_definition": "Euclidean distance after StandardScaler fit on original feature columns; heuristic only and not a unit-validity test.",
+  "shared_class_distribution_findings": {
+    "cotton": {
+      "N": {
+        "original_mean": 117.77,
+        "independent_mean": 68.78260869565217
+      },
+      "P": {
+        "original_mean": 46.24,
+        "independent_mean": 53.44202898550725
+      },
+      "K": {
+        "original_mean": 19.56,
+        "independent_mean": 106.68840579710145
+      },
+      "temperature": {
+        "original_mean": 23.988957895200006,
+        "independent_mean": 27.246159420289857
+      },
+      "humidity": {
+        "original_mean": 79.8434742538,
+        "independent_mean": 53.468405797101454
+      },
+      "ph": {
+        "original_mean": 6.912675495780002,
+        "independent_mean": 6.708405797101449
+      },
+      "rainfall": {
+        "original_mean": 80.3980431193,
+        "independent_mean": 171.8177536231884
+      }
+    },
+    "maize": {
+      "N": {
+        "original_mean": 77.76,
+        "independent_mean": 68.04838709677419
+      },
+      "P": {
+        "original_mean": 48.44,
+        "independent_mean": 63.774193548387096
+      },
+      "K": {
+        "original_mean": 19.79,
+        "independent_mean": 96.69354838709677
+      },
+      "temperature": {
+        "original_mean": 22.389203910199996,
+        "independent_mean": 27.102096774193548
+      },
+      "humidity": {
+        "original_mean": 65.0922494467,
+        "independent_mean": 53.0791935483871
+      },
+      "ph": {
+        "original_mean": 6.245189722399999,
+        "independent_mean": 6.8483064516129035
+      },
+      "rainfall": {
+        "original_mean": 84.76698766300002,
+        "independent_mean": 178.82645161290324
+      }
+    },
+    "rice": {
+      "N": {
+        "original_mean": 79.89,
+        "independent_mean": 70.42207792207792
+      },
+      "P": {
+        "original_mean": 47.58,
+        "independent_mean": 61.214285714285715
+      },
+      "K": {
+        "original_mean": 39.87,
+        "independent_mean": 97.20779220779221
+      },
+      "temperature": {
+        "original_mean": 23.6893322105,
+        "independent_mean": 27.343636363636364
+      },
+      "humidity": {
+        "original_mean": 82.27282153889999,
+        "independent_mean": 53.52987012987013
+      },
+      "ph": {
+        "original_mean": 6.425470922139999,
+        "independent_mean": 6.55487012987013
+      },
+      "rainfall": {
+        "original_mean": 236.18111359399998,
+        "independent_mean": 172.12662337662337
+      }
+    }
+  },
+  "confirmed_facts": [
+    "The only labels shared by both files are cotton, maize, and rice.",
+    "Both files use the same eight column names and seven numeric feature names.",
+    "Exact cross-source feature-vector matches and exact contradictory-label matches are reported explicitly.",
+    "The nearest-neighbor method is standardized Euclidean distance, used only as a descriptive similarity diagnostic."
+  ],
+  "unresolved": [
+    "Units, sampling depth, aggregation windows, collection geography, dates, and label provenance are absent from both CSVs.",
+    "Different per-class distributions may reflect real population differences, different measurement protocols, synthetic generation, or label/task mismatch; the CSVs cannot distinguish these explanations."
+  ]
+}

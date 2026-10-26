@@ -1,0 +1,25 @@
+{
+  "feature_order": [
+    "N",
+    "P",
+    "K",
+    "temperature",
+    "humidity",
+    "ph",
+    "rainfall"
+  ],
+  "target": "label",
+  "source_column_retained": true,
+  "source_column_excluded_from_features": true,
+  "label_normalization": "strip/casefold/whitespace collapse",
+  "exact_duplicate_definition": "normalized seven-feature vector plus normalized label",
+  "conflicts_excluded": true,
+  "heldout_feature_vectors_excluded_from_training": true,
+  "random_state": 42,
+  "library_versions": {
+    "python": "3.12.10",
+    "pandas": "3.0.6",
+    "numpy": "2.5.4",
+    "scikit_learn": "1.9.1"
+  }
+}

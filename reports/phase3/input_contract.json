@@ -1,0 +1,40 @@
+{
+  "status": "UNRESOLVED_UNTIL_SOURCE_DOCUMENTATION_CONFIRMS_SEMANTICS",
+  "features": {
+    "N": {
+      "meaning": "soil nitrogen",
+      "required_unit": "Must match training dataset's original unit and sampling method."
+    },
+    "P": {
+      "meaning": "soil phosphorus",
+      "required_unit": "Must match training dataset's original unit and sampling method."
+    },
+    "K": {
+      "meaning": "soil potassium",
+      "required_unit": "Must match training dataset's original unit and sampling method."
+    },
+    "temperature": {
+      "meaning": "temperature",
+      "required_unit": "degree Celsius; averaging window must match training data."
+    },
+    "humidity": {
+      "meaning": "relative humidity",
+      "required_unit": "percent; aggregation window must match training data."
+    },
+    "ph": {
+      "meaning": "soil pH",
+      "required_unit": "dimensionless; method and sampling depth should be documented."
+    },
+    "rainfall": {
+      "meaning": "rainfall",
+      "required_unit": "mm, with period (monthly vs growing-season total) explicitly confirmed."
+    }
+  },
+  "known_app_behavior": {
+    "temperature": "Mean of daily mean temperature over a recent 90-day window.",
+    "humidity": "Mean of daily mean relative humidity over a recent 90-day window.",
+    "rainfall": "Sum of daily precipitation over that 90-day window divided by 3 (approximate mm/month).",
+    "soil_card": "N/P/K ratings are mapped to dataset quartiles for low/medium/high; this is a proxy mapping, not a verified unit conversion.",
+    "warning": "Do not treat live app inputs as equivalent to training features until original feature definitions, units, and aggregation windows are documented and aligned."
+  }
+}

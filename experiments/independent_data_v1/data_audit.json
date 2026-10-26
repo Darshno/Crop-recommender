@@ -1,0 +1,419 @@
+{
+  "schema": {
+    "features": [
+      "N",
+      "P",
+      "K",
+      "temperature",
+      "humidity",
+      "ph",
+      "rainfall"
+    ],
+    "target": "label",
+    "normalization": "trim and casefold names and labels"
+  },
+  "sources": {
+    "original": {
+      "path": "C:\\Users\\darsh\\Downloads\\agrisense_phase1\\Crop_recommendation.csv",
+      "source": "original",
+      "row_count": 2200,
+      "column_count": 8,
+      "original_columns": [
+        "N",
+        "P",
+        "K",
+        "temperature",
+        "humidity",
+        "ph",
+        "rainfall",
+        "label"
+      ],
+      "normalized_columns": [
+        "N",
+        "P",
+        "K",
+        "temperature",
+        "humidity",
+        "ph",
+        "rainfall",
+        "label"
+      ],
+      "column_mapping": {
+        "N": "N",
+        "P": "P",
+        "K": "K",
+        "temperature": "temperature",
+        "humidity": "humidity",
+        "ph": "ph",
+        "rainfall": "rainfall",
+        "label": "label"
+      },
+      "dtypes": {
+        "N": "int64",
+        "P": "int64",
+        "K": "int64",
+        "temperature": "float64",
+        "humidity": "float64",
+        "ph": "float64",
+        "rainfall": "float64",
+        "label": "str"
+      },
+      "missing_values": {},
+      "non_numeric_values": {},
+      "non_finite_values": {},
+      "blank_labels": 0,
+      "domain_violations": {},
+      "ranges": {
+        "N": {
+          "min": 0.0,
+          "max": 140.0
+        },
+        "P": {
+          "min": 5.0,
+          "max": 145.0
+        },
+        "K": {
+          "min": 5.0,
+          "max": 205.0
+        },
+        "temperature": {
+          "min": 8.825674745,
+          "max": 43.67549305
+        },
+        "humidity": {
+          "min": 14.25803981,
+          "max": 99.98187601
+        },
+        "ph": {
+          "min": 3.504752314,
+          "max": 9.93509073
+        },
+        "rainfall": {
+          "min": 20.21126747,
+          "max": 298.5601175
+        }
+      },
+      "unique_labels": [
+        "apple",
+        "banana",
+        "blackgram",
+        "chickpea",
+        "coconut",
+        "coffee",
+        "cotton",
+        "grapes",
+        "jute",
+        "kidneybeans",
+        "lentil",
+        "maize",
+        "mango",
+        "mothbeans",
+        "mungbean",
+        "muskmelon",
+        "orange",
+        "papaya",
+        "pigeonpeas",
+        "pomegranate",
+        "rice",
+        "watermelon"
+      ],
+      "label_mapping": {
+        "apple": [
+          "apple"
+        ],
+        "banana": [
+          "banana"
+        ],
+        "blackgram": [
+          "blackgram"
+        ],
+        "chickpea": [
+          "chickpea"
+        ],
+        "coconut": [
+          "coconut"
+        ],
+        "coffee": [
+          "coffee"
+        ],
+        "cotton": [
+          "cotton"
+        ],
+        "grapes": [
+          "grapes"
+        ],
+        "jute": [
+          "jute"
+        ],
+        "kidneybeans": [
+          "kidneybeans"
+        ],
+        "lentil": [
+          "lentil"
+        ],
+        "maize": [
+          "maize"
+        ],
+        "mango": [
+          "mango"
+        ],
+        "mothbeans": [
+          "mothbeans"
+        ],
+        "mungbean": [
+          "mungbean"
+        ],
+        "muskmelon": [
+          "muskmelon"
+        ],
+        "orange": [
+          "orange"
+        ],
+        "papaya": [
+          "papaya"
+        ],
+        "pigeonpeas": [
+          "pigeonpeas"
+        ],
+        "pomegranate": [
+          "pomegranate"
+        ],
+        "rice": [
+          "rice"
+        ],
+        "watermelon": [
+          "watermelon"
+        ]
+      },
+      "class_distribution": {
+        "apple": 100,
+        "banana": 100,
+        "blackgram": 100,
+        "chickpea": 100,
+        "coconut": 100,
+        "coffee": 100,
+        "cotton": 100,
+        "grapes": 100,
+        "jute": 100,
+        "kidneybeans": 100,
+        "lentil": 100,
+        "maize": 100,
+        "mango": 100,
+        "mothbeans": 100,
+        "mungbean": 100,
+        "muskmelon": 100,
+        "orange": 100,
+        "papaya": 100,
+        "pigeonpeas": 100,
+        "pomegranate": 100,
+        "rice": 100,
+        "watermelon": 100
+      },
+      "exact_duplicate_full_rows": 0
+    },
+    "independent": {
+      "path": "C:\\Users\\darsh\\Downloads\\agrisense_phase1\\independent_data.csv",
+      "source": "independent",
+      "row_count": 1000,
+      "column_count": 8,
+      "original_columns": [
+        "N",
+        "P",
+        "K",
+        "temperature",
+        "humidity",
+        "ph",
+        "rainfall",
+        "label"
+      ],
+      "normalized_columns": [
+        "N",
+        "P",
+        "K",
+        "temperature",
+        "humidity",
+        "ph",
+        "rainfall",
+        "label"
+      ],
+      "column_mapping": {
+        "N": "N",
+        "P": "P",
+        "K": "K",
+        "temperature": "temperature",
+        "humidity": "humidity",
+        "ph": "ph",
+        "rainfall": "rainfall",
+        "label": "label"
+      },
+      "dtypes": {
+        "N": "int64",
+        "P": "int64",
+        "K": "int64",
+        "temperature": "float64",
+        "humidity": "float64",
+        "ph": "float64",
+        "rainfall": "float64",
+        "label": "str"
+      },
+      "missing_values": {},
+      "non_numeric_values": {},
+      "non_finite_values": {},
+      "blank_labels": 0,
+      "domain_violations": {},
+      "ranges": {
+        "N": {
+          "min": 0.0,
+          "max": 139.0
+        },
+        "P": {
+          "min": 0.0,
+          "max": 119.0
+        },
+        "K": {
+          "min": 0.0,
+          "max": 199.0
+        },
+        "temperature": {
+          "min": 15.0,
+          "max": 39.95
+        },
+        "humidity": {
+          "min": 20.05,
+          "max": 89.97
+        },
+        "ph": {
+          "min": 4.5,
+          "max": 8.99
+        },
+        "rainfall": {
+          "min": 51.55,
+          "max": 299.84
+        }
+      },
+      "unique_labels": [
+        "barley",
+        "cotton",
+        "maize",
+        "rice",
+        "soybean",
+        "sugarcane",
+        "wheat"
+      ],
+      "label_mapping": {
+        "barley": [
+          "barley"
+        ],
+        "cotton": [
+          "cotton"
+        ],
+        "maize": [
+          "maize"
+        ],
+        "rice": [
+          "rice"
+        ],
+        "soybean": [
+          "soybean"
+        ],
+        "sugarcane": [
+          "sugarcane"
+        ],
+        "wheat": [
+          "wheat"
+        ]
+      },
+      "class_distribution": {
+        "barley": 162,
+        "cotton": 138,
+        "maize": 124,
+        "rice": 154,
+        "soybean": 154,
+        "sugarcane": 134,
+        "wheat": 134
+      },
+      "exact_duplicate_full_rows": 0
+    }
+  },
+  "unit_compatibility": {
+    "status": "not_verified",
+    "reason": "CSV files contain no unit/provenance metadata; values were not converted or clipped.",
+    "feature_range_comparison": {
+      "N": {
+        "original": {
+          "min": 0.0,
+          "max": 140.0
+        },
+        "independent": {
+          "min": 0.0,
+          "max": 139.0
+        }
+      },
+      "P": {
+        "original": {
+          "min": 5.0,
+          "max": 145.0
+        },
+        "independent": {
+          "min": 0.0,
+          "max": 119.0
+        }
+      },
+      "K": {
+        "original": {
+          "min": 5.0,
+          "max": 205.0
+        },
+        "independent": {
+          "min": 0.0,
+          "max": 199.0
+        }
+      },
+      "temperature": {
+        "original": {
+          "min": 8.825674745,
+          "max": 43.67549305
+        },
+        "independent": {
+          "min": 15.0,
+          "max": 39.95
+        }
+      },
+      "humidity": {
+        "original": {
+          "min": 14.25803981,
+          "max": 99.98187601
+        },
+        "independent": {
+          "min": 20.05,
+          "max": 89.97
+        }
+      },
+      "ph": {
+        "original": {
+          "min": 3.504752314,
+          "max": 9.93509073
+        },
+        "independent": {
+          "min": 4.5,
+          "max": 8.99
+        }
+      },
+      "rainfall": {
+        "original": {
+          "min": 20.21126747,
+          "max": 298.5601175
+        },
+        "independent": {
+          "min": 51.55,
+          "max": 299.84
+        }
+      }
+    }
+  },
+  "protected_input_sha256": {
+    "C:\\Users\\darsh\\Downloads\\agrisense_phase1\\Crop_recommendation.csv": "54a5a6e5408668e668667efc50de2fc867c1b875e0431b4f54dd331b0a109a4e",
+    "C:\\Users\\darsh\\Downloads\\agrisense_phase1\\independent_data.csv": "2eeb7754870b96d68772471e90bc763e8fced03d19461158406b45126c20568d",
+    "C:\\Users\\darsh\\Downloads\\agrisense_phase1\\crop_model.pkl": "27a7aa782ed7a3a6e5c6ffc43bfedc9aac54d97cff71316c812c884c49bc16b6"
+  }
+}

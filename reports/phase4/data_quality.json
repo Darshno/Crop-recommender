@@ -1,0 +1,19 @@
+{
+  "source": "C:\\Users\\darsh\\Downloads\\agrisense_phase1\\data\\regional\\crop_yield.csv",
+  "input_rows": 19689,
+  "missing_columns": [],
+  "invalid_rows_dropped": 0,
+  "issues": [],
+  "yield_units": "dataset-dependent; source documentation was not provided",
+  "output_rows": 19689,
+  "numeric_columns_checked": [
+    "Crop_Year",
+    "Area",
+    "Production",
+    "Annual_Rainfall",
+    "Fertilizer",
+    "Pesticide",
+    "Yield"
+  ],
+  "empty_or_invalid_rows_before_drop": 0
+}

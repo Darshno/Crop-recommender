@@ -1,0 +1,23 @@
+{
+  "source_name": "REPLACE WITH INDEPENDENT DATA SOURCE",
+  "source_reference": "URL, DOI, report title, or field-study protocol",
+  "collection_method": "Describe field/lab measurement and sampling protocol",
+  "geography": "District/region and country",
+  "observation_period": "Start/end dates and crop season",
+  "label_definition": "How the crop label was assigned; state whether expert-verified",
+  "independent_of_training_data": true,
+  "units": {
+    "N": "REQUIRED: specify exact unit and soil sampling basis",
+    "P": "REQUIRED: specify exact unit and soil sampling basis",
+    "K": "REQUIRED: specify exact unit and soil sampling basis",
+    "temperature": "degree_Celsius; specify aggregation window",
+    "humidity": "percent_relative_humidity; specify aggregation window",
+    "ph": "dimensionless; specify sampling method/depth",
+    "rainfall": "mm; specify whether monthly or growing-season total"
+  },
+  "field_or_farm_ids_available": false,
+  "row_level_dates_available": false,
+  "labels_verified_by_agronomist": false,
+  "outcomes_measured": false,
+  "notes": "Replace all placeholders with true values. Do not claim independence unless verified."
+}

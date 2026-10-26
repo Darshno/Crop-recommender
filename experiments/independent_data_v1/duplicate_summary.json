@@ -1,0 +1,13 @@
+{
+  "within_original": 0,
+  "within_independent": 0,
+  "across_files": 0,
+  "conflicting_feature_groups": 0,
+  "conflicting_rows": 0,
+  "deduplicated_rows": 3200,
+  "training_rows": 2784,
+  "heldout_rows": 416,
+  "removed_original_duplicates_from_evaluation": 0,
+  "incompatible_label_rows_excluded_from_comparison": 584,
+  "conflict_rows_excluded_from_training": 0
+}

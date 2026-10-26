@@ -1,0 +1,251 @@
+{
+  "audit_scope": "read-only forensic audit; no source or existing experiment artifact modified",
+  "environment": {
+    "python": "3.12.10",
+    "pandas": "3.0.6",
+    "numpy": "2.5.4"
+  },
+  "schema": {
+    "original_columns": [
+      "N",
+      "P",
+      "K",
+      "temperature",
+      "humidity",
+      "ph",
+      "rainfall",
+      "label"
+    ],
+    "independent_columns": [
+      "N",
+      "P",
+      "K",
+      "temperature",
+      "humidity",
+      "ph",
+      "rainfall",
+      "label"
+    ],
+    "expected_feature_order": [
+      "N",
+      "P",
+      "K",
+      "temperature",
+      "humidity",
+      "ph",
+      "rainfall"
+    ],
+    "baseline_feature_order": [
+      "N",
+      "P",
+      "K",
+      "temperature",
+      "humidity",
+      "ph",
+      "rainfall"
+    ],
+    "experimental_feature_order": [
+      "N",
+      "P",
+      "K",
+      "temperature",
+      "humidity",
+      "ph",
+      "rainfall"
+    ],
+    "feature_order_match": true,
+    "original_dtypes": {
+      "N": "int64",
+      "P": "int64",
+      "K": "int64",
+      "temperature": "float64",
+      "humidity": "float64",
+      "ph": "float64",
+      "rainfall": "float64"
+    },
+    "independent_dtypes": {
+      "N": "int64",
+      "P": "int64",
+      "K": "int64",
+      "temperature": "float64",
+      "humidity": "float64",
+      "ph": "float64",
+      "rainfall": "float64"
+    },
+    "units": "not documented in either CSV or model metadata; cannot be verified"
+  },
+  "labels": {
+    "original_unique": [
+      "apple",
+      "banana",
+      "blackgram",
+      "chickpea",
+      "coconut",
+      "coffee",
+      "cotton",
+      "grapes",
+      "jute",
+      "kidneybeans",
+      "lentil",
+      "maize",
+      "mango",
+      "mothbeans",
+      "mungbean",
+      "muskmelon",
+      "orange",
+      "papaya",
+      "pigeonpeas",
+      "pomegranate",
+      "rice",
+      "watermelon"
+    ],
+    "independent_unique": [
+      "barley",
+      "cotton",
+      "maize",
+      "rice",
+      "soybean",
+      "sugarcane",
+      "wheat"
+    ],
+    "same_target_column_name": true,
+    "independent_classes_in_experimental_encoder": {
+      "barley": true,
+      "cotton": true,
+      "maize": true,
+      "rice": true,
+      "soybean": true,
+      "sugarcane": true,
+      "wheat": true
+    },
+    "all_seven_independent_classes_encoded": true,
+    "independent_class_counts": {
+      "barley": 162,
+      "soybean": 154,
+      "rice": 154,
+      "cotton": 138,
+      "sugarcane": 134,
+      "wheat": 134,
+      "maize": 124
+    },
+    "training_class_counts": {
+      "barley": 162,
+      "soybean": 154,
+      "sugarcane": 134,
+      "wheat": 134,
+      "rice": 100,
+      "maize": 100,
+      "chickpea": 100,
+      "kidneybeans": 100,
+      "pigeonpeas": 100,
+      "mothbeans": 100,
+      "mungbean": 100,
+      "blackgram": 100,
+      "lentil": 100,
+      "pomegranate": 100,
+      "banana": 100,
+      "mango": 100,
+      "grapes": 100,
+      "watermelon": 100,
+      "muskmelon": 100,
+      "apple": 100,
+      "orange": 100,
+      "papaya": 100,
+      "coconut": 100,
+      "cotton": 100,
+      "jute": 100,
+      "coffee": 100
+    }
+  },
+  "evaluation": {
+    "eligible_rows": 416,
+    "eligible_labels": [
+      "cotton",
+      "maize",
+      "rice"
+    ],
+    "baseline_accuracy": 0.009615384615384616,
+    "experimental_accuracy": 0.0,
+    "baseline_prediction_counts": {
+      "chickpea": 91,
+      "coffee": 78,
+      "grapes": 59,
+      "banana": 52,
+      "mango": 28,
+      "pigeonpeas": 26,
+      "rice": 14,
+      "papaya": 14,
+      "watermelon": 12,
+      "pomegranate": 10,
+      "kidneybeans": 7,
+      "maize": 7,
+      "mothbeans": 4,
+      "coconut": 4,
+      "orange": 4,
+      "mungbean": 2,
+      "jute": 2,
+      "apple": 2
+    },
+    "experimental_prediction_counts": {
+      "barley": 145,
+      "soybean": 132,
+      "wheat": 63,
+      "sugarcane": 56,
+      "pigeonpeas": 3,
+      "mothbeans": 2,
+      "lentil": 2,
+      "mango": 2,
+      "rice": 2,
+      "kidneybeans": 2,
+      "coffee": 2,
+      "banana": 2,
+      "pomegranate": 1,
+      "mungbean": 1,
+      "jute": 1
+    },
+    "mean_nearest_training_distance_standardized": 1.2484720340365132,
+    "median_nearest_training_distance_standardized": 1.2496349855423246
+  },
+  "findings": [
+    {
+      "status": "confirmed",
+      "finding": "Feature order and numeric schema are compatible",
+      "evidence": "Both model bundles declare N,P,K,temperature,humidity,ph,rainfall; all source columns are numeric and finite."
+    },
+    {
+      "status": "confirmed",
+      "finding": "No label-encoder omission explains the experimental 0% result",
+      "evidence": "All seven independent labels are present in the experimental encoder; eligible labels are cotton, maize, rice."
+    },
+    {
+      "status": "confirmed",
+      "finding": "Experimental predictions fail because predictions do not match the three eligible ground-truth labels",
+      "evidence": "Exact prediction table is in evaluation_predictions.csv; experimental accuracy is 0.0000."
+    },
+    {
+      "status": "potential",
+      "finding": "Feature distribution shift is present where outside-range percentages are nonzero",
+      "evidence": "See feature_comparison.csv and feature_distributions.png; range exceedance is diagnostic, not proof of unit mismatch."
+    },
+    {
+      "status": "potential",
+      "finding": "Units and target provenance remain unverified",
+      "evidence": "Neither CSV contains unit metadata, collection provenance, or a label-definition contract."
+    }
+  ],
+  "range_exceedance_percent": {
+    "N": 0.0,
+    "P": 4.0,
+    "K": 2.9000000000000004,
+    "temperature": 0.0,
+    "humidity": 0.0,
+    "ph": 0.0,
+    "rainfall": 0.6
+  },
+  "recommended_next_steps": [
+    "Verify units, measurement procedures, and label-generation provenance with the data owner.",
+    "Do not tune either model against these evaluation rows.",
+    "If provenance is confirmed, design a stratified, source-independent validation protocol covering all target classes.",
+    "Inspect prediction_distribution.csv and nearest_training_examples.csv with domain experts before any retraining decision."
+  ]
+}

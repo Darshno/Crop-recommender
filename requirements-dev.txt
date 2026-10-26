@@ -1,0 +1,8 @@
+-r requirements.txt
+pytest>=8.0
+
+# Training/evaluation-only dependencies; not required to run the Streamlit app.
+xgboost>=2.0,<4
+shap>=0.45,<1
+matplotlib>=3.8,<4
+seaborn>=0.13,<1
