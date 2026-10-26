@@ -45,6 +45,13 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
+For the alternative farmer interface, which includes text-to-speech and
+optional soil-card OCR:
+
+```powershell
+pip install -r requirements-farmer.txt
+```
+
 For development, tests, and model-training scripts:
 
 ```powershell
@@ -89,6 +96,36 @@ no API key or application secret is currently required. Weather lookup is
 optional. If the network is unavailable, users can continue with manually
 entered weather values; the app displays an error instead of silently
 pretending that weather was fetched.
+
+### Deploy on Render
+
+1. Push this repository to GitHub, including `crop_model.pkl`,
+   `Crop_recommendation.csv`, `data/regional/crop_yield.csv`, and the `assets/`
+   directory.
+2. In Render, select **New +** → **Web Service**, connect the GitHub
+   repository, and select the branch to deploy.
+3. Use these settings:
+
+   | Setting | Value |
+   | --- | --- |
+   | Runtime | Python 3 |
+   | Build Command | `pip install -r requirements.txt` |
+   | Start Command | `streamlit run app.py --server.address=0.0.0.0 --server.port=$PORT` |
+   | Health Check Path | `/_stcore/health` |
+
+4. Add the environment variable `PYTHON_VERSION` with value `3.12` in
+   Render's Environment settings. The repository also includes a
+   `.python-version` file for tools that support automatic version detection.
+5. Choose the **Free** instance for testing or a paid instance for production,
+   then click **Create Web Service**.
+
+Render supplies the `$PORT` environment variable. Binding Streamlit to
+`0.0.0.0` and that port is required for the service to become reachable.
+After deployment, open the generated `onrender.com` URL. To deploy the
+alternative farmer interface instead, use
+`streamlit run app_farmer.py --server.address=0.0.0.0 --server.port=$PORT` as
+the Start Command and use `pip install -r requirements-farmer.txt` as the
+Build Command.
 
 ## Validation
 
